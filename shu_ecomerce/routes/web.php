@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[FrontendController::class,'index']);
+
+Route::get('/admin/login',[AdminController::class,'adminLoginForm']);
+
+Route::post('/admin/login',[AdminController::class,'adminLogin']);
