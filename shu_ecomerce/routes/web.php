@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,7 @@ Route::get('/',[FrontendController::class,'index']);
 Route::get('/admin/login',[AdminController::class,'adminLoginForm']);
 
 Route::post('/admin/login',[AdminController::class,'adminLogin']);
+Route::get('/admin/dashboard',[AdminController::class,'adminDasboard']);
+Route::get('/category/add',[CategoryController::class,'showCategoryform']);
+Route::get('/category/manage',[CategoryController::class,'showallCategory']);
+Route::post('/category/store',[CategoryController::class,'categoryStore']);

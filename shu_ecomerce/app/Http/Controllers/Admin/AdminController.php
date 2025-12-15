@@ -18,7 +18,11 @@ class AdminController extends Controller
        if(!$admin){
         return redirect()->back()->with('error','Invalid user');
        }else{
-           return "Admin Dashboard";
+           return redirect('/admin/dashboard');
        }
+    }
+    public function adminDasboard()
+    {
+        return view('backend.home.index');
     }
 }
