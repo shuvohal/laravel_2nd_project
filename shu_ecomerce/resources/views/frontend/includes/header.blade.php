@@ -72,12 +72,11 @@
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
-								<li><a href="#">home</a></li>
-								<li><a href="#">shop</a></li>
-								<li><a href="#">promotion</a></li>
-								<li><a href="#">pages</a></li>
-								<li><a href="#">blog</a></li>
-								<li><a href="contact.html">contact</a></li>
+								<li><a href="{{url('/')}}">home</a></li>
+								@foreach($categories as $category)
+                                    <li><a href="">{{$category->name}}</a></li>
+								@endforeach
+								
 							</ul>
 							<ul class="navbar_user">
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>

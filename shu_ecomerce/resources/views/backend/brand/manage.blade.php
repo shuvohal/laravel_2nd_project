@@ -8,7 +8,7 @@
 
      <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Category list</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Brand list</h6>
                         </div>
                              @if(session()->has('success'))
                        <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -23,6 +23,7 @@
                                     <thead>
                                         <tr>
                                             <th>SL</th>
+                                             <th>Category Name</th>
                                             <th>Name</th>
                                             <th>Status</th>
                                             <th>Action</th>
@@ -31,27 +32,28 @@
                                     </thead>
                                    
                                     <tbody>
-                                        @foreach($categories as $category)
+                                        @foreach($brands as $brand)
                                              <tr>
                                             <td>{{$loop->index+1}}</td>
-                                            <td>{{$category->name}}</td>
+                                            <td>Category name</td>
+                                            <td>{{$brand->name}}</td>
                                             <td>
-                                                @if($category->status==1)
+                                                @if($brand->status==1)
                                                   <span>Active</span>
                                                 @else
                                                     <span>Inactive</span>
                                                 @endif
                                             </td>
                                             <td>
-                                                 <a href="{{url('/category/edit/'.$category->id)}}" class="btn btn-sm btn-info">Edit</a>
-                                                  @if($category->status==1)
-                                                  <a href="{{url('/category/active/'.$category->id)}}" class="btn btn-sm btn-primary">Active</a>
+                                                 <a href="{{url('/brand/edit/'.$brand->id)}}" class="btn btn-sm btn-info">Edit</a>
+                                                  @if($brand->status==1)
+                                                  <a href="{{url('/brand/active/'.$brand->id)}}" class="btn btn-sm btn-primary">Active</a>
                                                 @else
-                                                    <a href="{{url('/category/inactive/'.$category->id)}}" class="btn btn-sm btn-warning">Inactive</a>
+                                                    <a href="{{url('/brand/inactive/'.$brand->id)}}" class="btn btn-sm btn-warning">Inactive</a>
                                                 @endif
                                                   
                                                    
-                                                  <a href="{{url('/category/delete/'.$category->id)}}" onclick="return confirm('Are you sure delete this info ?')" class="btn btn-sm btn-danger">Delete</a>
+                                                  <a href="{{url('/brand/delete/'.$brand->id)}}" onclick="return confirm('Are you sure delete this info ?')" class="btn btn-sm btn-danger">Delete</a>
                                             </td>
                                             
                                         </tr>
