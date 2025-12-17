@@ -21,7 +21,8 @@ class ProductController extends Controller
     }
     public function manageProduct()
     {
-        return view('backend.product.manage');
+        $products = Product::with('category','brand')->orderBy('created_at','desc')->get();
+        return view('backend.product.manage',compact('products'));
     }
 
     public function storeProduct(ProductRequest $request)
@@ -64,5 +65,20 @@ class ProductController extends Controller
         }
 
        return redirect()->back()->with('success','product has been inserted');
+    }
+
+    public function activeProduct($id)
+    {
+        $activeProduct = Product::find($id);
+        $activeProduct->status =0;
+        $activeProduct->save();
+        return redirect()->back()->with('success','product has been inactive');
+    }
+    public function inactiveProduct($id)
+    {
+        $inactiveProduct = Product::find($id);
+        $inactiveProduct->status =1;
+        $inactiveProduct->save();
+        return redirect()->back()->with('success','product has been active');
     }
 }

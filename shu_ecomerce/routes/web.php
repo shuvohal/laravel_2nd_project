@@ -48,3 +48,6 @@ Route::get('/brand/delete/{id}',[BrandController::class,'brandDelete']);
 Route::get('/product/add',[ProductController::class,'addProduct']);
 Route::get('/product/manage',[ProductController::class,'manageProduct']);
 Route::post('/product/store',[ProductController::class,'storeProduct']);
+Route::get('/product/active/{id}',[ProductController::class,'activeProduct']);
+Route::get('/product/inactive/{id}',[ProductController::class,'inactiveProduct']);
+
