@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,3 +43,8 @@ Route::post('/brand/update/{id}',[BrandController::class,'brandUpdate']);
 Route::get('/brand/active/{id}',[BrandController::class,'brandInactive']);
 Route::get('/brand/inactive/{id}',[BrandController::class,'brandActive']);
 Route::get('/brand/delete/{id}',[BrandController::class,'brandDelete']);
+
+//product controller
+Route::get('/product/add',[ProductController::class,'addProduct']);
+Route::get('/product/manage',[ProductController::class,'manageProduct']);
+Route::post('/product/store',[ProductController::class,'storeProduct']);
