@@ -19,6 +19,14 @@
 </div>
 
 @include('frontend.includes.script')
+
+
+
+
+@flasher_render
+
+
+
 </body>
 
 </html>

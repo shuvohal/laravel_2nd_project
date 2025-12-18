@@ -140,6 +140,10 @@
 								<div class="product_image">
 									<img src="{{asset('/product/'.$product->image)}}" alt="">
 								</div>
+								<form action="{{url('/add/to/cart')}}" method="post">
+                                  @csrf
+								  <input type="hidden" name="product_id" value="{{$product->id}}" />
+								  <input type="hidden" name="product_price" value="{{$product->price}}" />
 								<div class="favorite favorite_left"></div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
 								<div class="product_info">
@@ -147,8 +151,9 @@
 									<div class="product_price">{{$product->discount_price}}<span>{{$product->price}}</span></div>
 								</div>
 							</div>
-							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+							<button type="submit" class="red_button add_to_cart_button">add to cart</button>
 						</div>
+						</form>
 
 						@endforeach
 
