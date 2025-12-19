@@ -28,11 +28,11 @@
 				</li>
 				<li class="menu_item has-children">
 					<a href="#">
-						English
+						Bangla
 						<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="menu_selection">
-						<li><a href="#">French</a></li>
+						<li><a href="#">English</a></li>
 						<li><a href="#">Italian</a></li>
 						<li><a href="#">German</a></li>
 						<li><a href="#">Spanish</a></li>
@@ -60,7 +60,7 @@
 
 	<!-- Slider -->
 
-	<div class="main_slider" style="background-image:url({{asset('/frontend/assets/')}}/images/slider_1.jpg)">
+	<div class="main_slider" style="background-image:url({{asset('/frontend/assets/')}}/images/slider_1.png)">
 		<div class="container fill_height">
 			<div class="row align-items-center fill_height">
 				<div class="col">
@@ -80,7 +80,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="banner_item align-items-center" style="background-image:url({{asset('/frontend/assets/')}}/images/banner_1.jpg)">
+					<div class="banner_item align-items-center" style="background-image:url({{asset('/frontend/assets/')}}/images/try-1.png)">
 						<div class="banner_category">
 							<a href="categories.html">women's</a>
 						</div>
@@ -94,7 +94,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="banner_item align-items-center" style="background-image:url({{asset('/frontend/assets/')}}/images/banner_3.jpg)">
+					<div class="banner_item align-items-center" style="background-image:url({{asset('/frontend/assets/')}}/images/DIU_shu.jpg)">
 						<div class="banner_category">
 							<a href="categories.html">men's</a>
 						</div>
@@ -203,7 +203,7 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<div class="deal_ofthe_week_img">
-						<img src="{{asset('/frontend/assets/')}}/images/deal_ofthe_week.png" alt="">
+						<img src="{{asset('/frontend/assets/')}}/images/DIU_shu.jpg">
 					</div>
 				</div>
 				<div class="col-lg-6 text-right deal_ofthe_week_col">

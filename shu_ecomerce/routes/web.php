@@ -24,6 +24,7 @@ Route::post('/add/to/cart',[FrontendController::class,'addTocart']);
 Route::get('/checkout',[FrontendController::class,'Checkout']);
 Route::post('/cart/product/update/{id}',[FrontendController::class,'updateCartProduct']);
 Route::get('/cart/product/delete/{id}',[FrontendController::class,'deleteCartProduct']);
+Route::post('/order/place',[FrontendController::class,'OrderPlace']);
 
 
 
@@ -32,6 +33,9 @@ Route::get('/admin/login',[AdminController::class,'adminLoginForm']);
 
 Route::post('/admin/login',[AdminController::class,'adminLogin']);
 Route::get('/admin/dashboard',[AdminController::class,'adminDasboard']);
+
+Route::get('/orders',[AdminController::class,'Orders']);
+
 Route::get('/category/add',[CategoryController::class,'showCategoryform']);
 Route::get('/category/manage',[CategoryController::class,'showallCategory']);
 Route::post('/category/store',[CategoryController::class,'categoryStore']);

@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class FrontendController extends Controller
 {
@@ -49,6 +51,21 @@ class FrontendController extends Controller
     $deletecartproduct = Cart::find($id);
     $deletecartproduct->delete();
     return redirect()->back()->with('error','product has been deleted');
+  }
+
+  public function OrderPlace(Request $request)
+  {
+      $order =new Order();
+      $order->name = $request->name;
+      $order->ip_address = $request->ip();
+      $order->invoice_id = Str::random();
+      $order->billing_address = $request->address;
+      $order->shipping_address = $request->address;
+      $order->phone = $request->phone;
+      $order->total_price = $request->total_price;
+      $order->total_qty = $request->total_qty;
+      $order->save();
+      return redirect('/')->with('success','your order has been completed');
   }
 
 }

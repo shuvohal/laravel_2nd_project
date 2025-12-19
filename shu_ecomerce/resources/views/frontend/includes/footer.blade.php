@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="footer_nav_container">
-						<div class="cr">©2018 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
+						<div class="cr">©2025 all copy  Rights Reserverd.Made with <class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">shuvo </a> &amp; distributed by <a href="https://www.linkedin.com/in/shuvo-halder-588817302/">Halder</a></div>
 					</div>
 				</div>
 			</div>

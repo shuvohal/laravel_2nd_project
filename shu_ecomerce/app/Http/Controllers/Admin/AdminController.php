@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Models\Admin;
+use App\Models\Order;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,11 @@ class AdminController extends Controller
     public function adminDasboard()
     {
         return view('backend.home.index');
+    }
+
+    public function Orders()
+    {
+        $orders = Order::orderBy('created_at','desc')->get();
+        return view('backend.Order.Orders',compact('orders'));
     }
 }
