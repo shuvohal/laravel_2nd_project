@@ -17,6 +17,9 @@
 <link rel="stylesheet" type="text/css" href="{{asset('/frontend/assets/')}}/styles/single_styles.css">
 <link rel="stylesheet" type="text/css" href="{{asset('/frontend/assets/')}}/styles/single_responsive.css">
 
+<link rel="stylesheet" type="text/css" href="{{asset('/frontend/assets/')}}/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="{{asset('/frontend/assets/')}}/styles/categories_responsive.css">
+
 
 
 

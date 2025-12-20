@@ -60,7 +60,7 @@
 							<ul class="navbar_menu">
 								<li><a href="{{url('/')}}">home</a></li>
 								@foreach($categories as $category)
-                                    <li><a href="">{{$category->name}}</a></li>
+                                    <li><a href="{{url('/category/products/'.$category->id . '/' .$category->slug)}}">{{$category->name}}</a></li>
 								@endforeach
 								
 							</ul>

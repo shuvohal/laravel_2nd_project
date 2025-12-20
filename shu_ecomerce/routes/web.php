@@ -37,6 +37,7 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 //FrontendController
 Route::get('/',[FrontendController::class,'index']);
 Route::get('/product/details/{id}/{slug}',[FrontendController::class,'productDetails']);
+Route::get('/category/products/{id}/{slug}',[FrontendController::class,'CategoryProducts']);
 Route::post('/add/to/cart',[FrontendController::class,'addTocart']);
 Route::get('/checkout',[FrontendController::class,'Checkout']);
 Route::post('/cart/product/update/{id}',[FrontendController::class,'updateCartProduct']);

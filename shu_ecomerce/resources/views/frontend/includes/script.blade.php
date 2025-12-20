@@ -18,3 +18,13 @@
 <script src="{{asset('/frontend/assets/')}}/js/single_custom.js"></script>
 
 
+
+
+
+
+
+
+
+<script src="{{asset('/frontend/assets/')}}/js/categories_custom.js"></script>
+
+
