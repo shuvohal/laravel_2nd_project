@@ -18,6 +18,14 @@ class FrontendController extends Controller
         $products = Product::with('category','brand')->where('status',1)->orderBy('created_at','desc')->get();
         return view('frontend.home.index',compact('categories','products'));
     }
+     
+    public function productDetails($id,$slug)
+    {
+      $categories =Category::orderBy('id','desc')->where('status',1)->get();
+      $product =Product::with('productDetails')->find($id);
+      return view('frontend.home.details',compact('categories','product'));
+    }
+
     public function addTocart(Request $request)
     {
        $addtocart = new Cart();

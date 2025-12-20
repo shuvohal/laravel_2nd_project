@@ -6,3 +6,15 @@
 <script src="{{asset('/frontend/assets/')}}/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="{{asset('/frontend/assets/')}}/plugins/easing/easing.js"></script>
 <script src="{{asset('/frontend/assets/')}}/js/custom.js"></script>
+
+
+
+
+
+
+
+
+<script src="{{asset('/frontend/assets/')}}/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="{{asset('/frontend/assets/')}}/js/single_custom.js"></script>
+
+

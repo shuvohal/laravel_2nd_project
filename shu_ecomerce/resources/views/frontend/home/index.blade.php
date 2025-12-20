@@ -147,7 +147,7 @@
 								<div class="favorite favorite_left"></div>
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
 								<div class="product_info">
-									<h6 class="product_name"><a href="single.html">{{$product->name}}</a></h6>
+									<h6 class="product_name"><a href="{{url('/product/details/'.$product->id . '/' .$product->slug)}}">{{$product->name}}</a></h6>
 									<div class="product_price">{{$product->discount_price}}<span>{{$product->price}}</span></div>
 								</div>
 							</div>
