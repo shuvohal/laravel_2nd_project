@@ -135,27 +135,48 @@
 						<!-- Product 1 -->
 
 						@foreach($products as $product)
-						<div class="product-item men">
-							<div class="product discount product_filter">
-								<div class="product_image">
-									<img src="{{asset('/product/'.$product->image)}}" alt="">
-								</div>
-								<form action="{{url('/add/to/cart')}}" method="post">
-                                  @csrf
-								  <input type="hidden" name="product_id" value="{{$product->id}}" />
-								  <input type="hidden" name="product_price" value="{{$product->price}}" />
-								<div class="favorite favorite_left"></div>
-								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
-								<div class="product_info">
-									<h6 class="product_name"><a href="{{url('/product/details/'.$product->id . '/' .$product->slug)}}">{{$product->name}}</a></h6>
-									<div class="product_price">{{$product->discount_price}}<span>{{$product->price}}</span></div>
-								</div>
-							</div>
-							<button type="submit" class="red_button add_to_cart_button">add to cart</button>
-						</div>
-						</form>
+<div class="product-item men">
+    <form action="{{ url('/add/to/cart') }}" method="POST">
+        @csrf
 
-						@endforeach
+        <div class="product discount product_filter">
+            <div class="product_image">
+                <img src="{{ asset('/product/'.$product->image) }}" alt=""
+                     style="width:100%;height:250px;object-fit:cover;display:block;">
+            </div>
+
+            <input type="hidden" name="product_id" value="{{ $product->id }}">
+            <input type="hidden" name="product_price" value="{{ $product->price }}">
+
+            <div class="favorite favorite_left"></div>
+
+            <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
+                <span>-$20</span>
+            </div>
+
+            <div class="product_info">
+                <h6 class="product_name">
+                    <a href="{{ url('/product/details/'.$product->id.'/'.$product->slug) }}">
+                        {{ $product->name }}
+                    </a>
+                </h6>
+                <div class="product_price">
+                    {{ $product->discount_price }} <span>{{ $product->price }}</span>
+                </div>
+            </div>
+
+            <button type="submit" class="red_button add_to_cart_button"
+                style="width:100%;margin-top:10px;display:block;position:relative;z-index:5;
+                       background:#ff3c3c;color:#fff;padding:10px;border-radius:6px;font-weight:600;">
+                Add to Cart
+            </button>
+        </div>
+    </form>
+</div>
+@endforeach
+
+
+
 
 						<!-- Product 2 -->
 

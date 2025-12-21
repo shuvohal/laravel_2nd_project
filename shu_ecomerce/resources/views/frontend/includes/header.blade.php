@@ -33,9 +33,9 @@
 									</ul>
 								</li>
 								
-								<li class="account"> <a href="#"> My Account <i class="fa fa-angle-down"></i> </a>
-								 <ul class="account_selection"> <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-							   <li><a href="#">
+								<li class="account"> <a href="{{url('/checkout')}}"> My Account <i class="fa fa-angle-down"></i> </a>
+								 <ul class="account_selection"> <li><a href="{{url('/user/login-register')}}"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+							   <li><a href="{{url('/user/login-register')}}">
 								<i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 							 </ul>
 							 </li>

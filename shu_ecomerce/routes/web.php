@@ -43,6 +43,11 @@ Route::get('/checkout',[FrontendController::class,'Checkout']);
 Route::post('/cart/product/update/{id}',[FrontendController::class,'updateCartProduct']);
 Route::get('/cart/product/delete/{id}',[FrontendController::class,'deleteCartProduct']);
 Route::post('/order/place',[FrontendController::class,'OrderPlace']);
+Route::get('/user/login-register',[FrontendController::class,'userloginRegister']);
+Route::post('/user/registation', [FrontendController::class, 'userRegister']);
+Route::post('/user/login', [FrontendController::class, 'userlogin']);
+
+Route::post('/logout', [FrontendController::class, 'logout'])->middleware('auth');
 
 
 

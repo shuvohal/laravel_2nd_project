@@ -40,38 +40,44 @@
                                    
                                     <tbody>
                                       
-                                        @foreach($products as $product)
-                                        <tr>
-                                            <td>{{$loop->index+1}}</td>
-                                            <td>{{$product->name}}</td>
-                                            <td>{{$product->category->name}}</td>
-                                            <td>{{$product->brand->name}}</td>
-                                            <td>{{$product->price}}</td>
-                                            <td>{{$product->qty}}</td>
-                                            <td>
-                                                <img src="{{asset('/product/'.$product->image)}}" height="80" width="80"/>
-                                            </td>
-                                            <td>
-                                                @if($product->status == 1)
-                                                  <span>Active</span>
-                                                @else
-                                                  <span>Inactive</span>
-                                                @endif
-                                            </td>
-                                            
-                                            <td>
-                                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                                @if($product->status == 1)
-                                                  <a href="{{url('/product/active/'.$product->id)}}" class="btn btn-sm btn-warning">Inactive</a>
-                                                @else
-                                                  <a href="{{url('/product/inactive/'.$product->id)}}" class="btn btn-sm btn-success">Active</a>
-                                                @endif
-                                                
-                                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                            </td>
-                                            
-                                        </tr>
-                                        @endforeach
+                                       @foreach($products as $product)
+<tr>
+    <td>{{ $loop->iteration }}</td>
+
+    {{-- Category Name --}}
+    <td>{{ optional($product->category)->name ?? 'N/A' }}</td>
+
+    {{-- Brand Name --}}
+    <td>{{ optional($product->brand)->name ?? 'N/A' }}</td>
+
+    {{-- Product Name --}}
+    <td>{{ $product->name }}</td>
+
+    <td>{{ $product->price }}</td>
+    <td>{{ $product->qty }}</td>
+
+    <td>
+        <img src="{{ asset('/product/'.$product->image) }}" height="80" width="80" />
+    </td>
+
+    <td>
+        {{ $product->status == 1 ? 'Active' : 'Inactive' }}
+    </td>
+
+    <td>
+        <a href="#" class="btn btn-sm btn-info">Edit</a>
+
+        @if($product->status == 1)
+            <a href="{{ url('/product/active/'.$product->id) }}" class="btn btn-sm btn-warning">Inactive</a>
+        @else
+            <a href="{{ url('/product/inactive/'.$product->id) }}" class="btn btn-sm btn-success">Active</a>
+        @endif
+
+        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+    </td>
+</tr>
+@endforeach
+
                                         
                                     </tbody>
                                 </table>
